@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <nav>
-        <input type="text" id="search" placeholder="Szukaj Pokemona...">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pokedex</a></li>
+            <li><a href="#">Videogames</a></li>
+            <li><a href="#">GCC Pokemon</a></li>
+            <li><a href="#">TV Pokemon</a></li>
+            <li><a href="#">Play! Pokemon</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+        <div id="search-results">
+            <input type="text" id="search" placeholder="Szukaj Pokemona...">
+            <button id="search-button"></button>
+        </div>
     </nav>
-    <div>
-        <section id="pokemon-list">
-            <h2>Lista Pokemonów</h2>
-            <ul id="list"></ul>
-        </section>
-        <section id="pokemon-details">
-            <h2>Szczegóły Pokemona</h2>
-            <div id="details"></div>
-        </section>
-    </div>
-    <script src="app.js"></script>
+    <main>
+        <div>
+            <div id="pokemon-loading">
+                <ul id="loading">
+
+                </ul>
+            </div>
+            <section id="pokemon-list">
+                <ul id="list"></ul>
+            </section>
+            <section id="pokemon-details">
+            </section>
+        </div>
+        <script src="app.js"></script>
+    </main>
 </body>
 </html>
