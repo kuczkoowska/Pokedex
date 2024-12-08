@@ -26,7 +26,8 @@ async function getList() {
             pokemonList.push(data);
 
             if (pokemonHTML.children.length < 20) {
-                createList(pokemonList);
+                createList(pokemonList, 20);
+                console.log('createList');
             }
 
             const nameElement = document.createElement('li');
@@ -83,9 +84,13 @@ function searchPokemon() {
     }
 }
 
-function createList(pokemons) {
+function createList(pokemons, number) {
+
+    const pokemonsToDisplay = number ? pokemons.slice(0, number) : pokemons;
+    
     pokemonHTML.innerHTML = '';
-    pokemons.forEach(pokemon => {
+
+    pokemonsToDisplay.forEach(pokemon => {
         const listItem = document.createElement('li');
         listItem.onclick = () => detailsPokemon(pokemon);
         const img = document.createElement('img');
