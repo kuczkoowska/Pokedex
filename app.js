@@ -74,6 +74,10 @@ function searchPokemon() {
     const value = input.value.toLowerCase();
     const filterPokemon = pokemonList.filter(pokemon => pokemon.name.toLowerCase().includes(value));
 
+    if (!value) {
+        createList(pokemonList, 20);
+        return;
+    }
     if (filterPokemon.length === 0) {
         pokemonHTML.innerHTML = '';
         const noResult = document.createElement('p');
