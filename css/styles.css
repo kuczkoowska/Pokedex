@@ -56,6 +56,13 @@ nav ul li a {
   color: black;
   font-weight: bold;
 }
+nav ul li .coming-soon {
+  color: gray;
+}
+nav ul li .coming-soon:hover {
+  cursor: not-allowed;
+  color: gray;
+}
 nav div {
   display: flex;
   justify-content: center;
@@ -65,6 +72,20 @@ nav div {
   padding: 0 20px 0 0;
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
+  /* Search button styles 
+  #search-button {
+      background-color: rgb(233, 78, 78);
+      color: white;
+      padding: 30px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(240, 67, 67, 0.664);
+      cursor: pointer;
+
+      &:hover {
+      background-color: rgb(211, 21, 21);
+      }
+  } */
 }
 nav div #search {
   border: none;
@@ -75,18 +96,6 @@ nav div #search {
 }
 nav div #search:focus {
   outline: none;
-}
-nav div #search-button {
-  background-color: rgb(233, 78, 78);
-  color: white;
-  padding: 30px;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(240, 67, 67, 0.664);
-  cursor: pointer;
-}
-nav div #search-button:hover {
-  background-color: rgb(211, 21, 21);
 }
 
 main div {
@@ -160,7 +169,7 @@ main div #pokemon-list ul li p:nth-of-type(2) {
   top: -70px;
 }
 #pokemon-details .id {
-  color: red;
+  color: rgb(105, 105, 105);
 }
 #pokemon-details h2 {
   color: rgb(0, 0, 0);
@@ -169,22 +178,43 @@ main div #pokemon-list ul li p:nth-of-type(2) {
 }
 #pokemon-details .types {
   list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 20px 0;
 }
 #pokemon-details .types li {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: pink;
   color: green;
 }
 #pokemon-details h3 {
+  padding: 10px 0;
   text-transform: uppercase;
 }
 #pokemon-details .abilities {
+  display: flex;
+  gap: 10px;
   list-style: none;
+  padding-bottom: 20px;
 }
 #pokemon-details .abilities li {
   color: rgb(0, 0, 0);
+  background-color: royalblue;
+  padding: 7px;
+  border-radius: 20px;
 }
 #pokemon-details p {
-  color: pink;
+  padding: 10px 0;
+  color: rgb(0, 0, 0);
 }
 #pokemon-details .stats {
-  color: purple;
+  padding: 10px 0;
+  color: rgb(0, 0, 0);
+}
+#pokemon-details .stats li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }/*# sourceMappingURL=styles.css.map */

@@ -1,11 +1,11 @@
 const pokemonHTML = document.querySelector('#list');
 const input = document.querySelector('#search');
-const search = document.querySelector('#search-button');
+//const search = document.querySelector('#search-button');
 const container = document.querySelector('#pokemon-loading');
 const loadingText = document.querySelector('#loading');
 
 
-search.onclick = () => searchPokemon();
+//search.onclick = () => searchPokemon();
 input.onkeyup = (event) => searchPokemon();
 input.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {

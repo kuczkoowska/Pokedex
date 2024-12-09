@@ -54,10 +54,20 @@ nav {
         list-style: none;
 
         li {
+
             a {
                 text-decoration: none;
                 color: black;
                 font-weight: bold;
+            }
+
+            .coming-soon {
+                color: gray;
+
+                &:hover {
+                    cursor: not-allowed;
+                    color: gray;
+                }
             }
         }
     }
@@ -84,6 +94,7 @@ nav {
             }
         }
 
+        /* Search button styles 
         #search-button {
             background-color: rgb(233, 78, 78);
             color: white;
@@ -94,9 +105,9 @@ nav {
             cursor: pointer;
 
             &:hover {
-                background-color: rgb(211, 21, 21);
+            background-color: rgb(211, 21, 21);
             }
-        }
+        } */
     }  
 }
 
@@ -184,7 +195,7 @@ main {
     }
 
     .id {
-        color: red;
+        color: rgb(105, 105, 105);
     }
 
     h2 {
@@ -195,30 +206,52 @@ main {
 
     .types {
         list-style: none;
+        display: flex;
+        gap: 10px;
+        padding: 20px 0;
 
         li {
+            border-radius: 20px;
+            padding: 10px;
+            background-color: pink;
             color: green;
         }
     }
 
     h3 {
+        padding: 10px 0;
         text-transform: uppercase;
     }
 
     .abilities {
+        display: flex;
+        gap: 10px;
         list-style: none;
+        padding-bottom: 20px;
 
         li {
             color: rgb(0, 0, 0);
+            background-color: royalblue;
+            padding: 7px;
+            border-radius: 20px;
         }
     }
 
     p {
-        color: pink;
+        padding: 10px 0;
+        color: rgb(0, 0, 0);
     }
 
     .stats {
-        color: purple;
+        padding: 10px 0;
+        color: rgb(0, 0, 0);
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid rgb(0, 0, 0);
+        }
     }
 
     
