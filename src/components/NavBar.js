@@ -1,4 +1,4 @@
-const navBar = () => {
+const NavBar = () => {
     return (
         <nav>
             <ul>

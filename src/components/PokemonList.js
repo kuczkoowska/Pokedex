@@ -1,8 +1,7 @@
-const pokemonList = ({ pokemons, onSelectPokemon}) => {
+const PokemonList = ({ pokemons, onSelectPokemon}) => {
     return (
         <section id="pokemon-list">
                 <ul id="list">
-                    
                     {pokemons.map((pokemon) => {
                         <li onClick = {() => onSelectPokemon(pokemon)}> 
                             <img src={pokemon.sprites.front_default} alt={pokemon.name}></img>
