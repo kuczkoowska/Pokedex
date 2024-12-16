@@ -63,7 +63,9 @@ nav ul li .coming-soon:hover {
   cursor: not-allowed;
   color: gray;
 }
-nav div {
+
+#search-results {
+  margin: 20px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,29 +74,15 @@ nav div {
   padding: 0 20px 0 0;
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
-  /* Search button styles 
-  #search-button {
-      background-color: rgb(233, 78, 78);
-      color: white;
-      padding: 30px;
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(240, 67, 67, 0.664);
-      cursor: pointer;
-
-      &:hover {
-      background-color: rgb(211, 21, 21);
-      }
-  } */
 }
-nav div #search {
+#search-results #search {
   border: none;
   width: 100%;
   padding: 30px;
   border-radius: 20px;
   font-size: 0.9rem;
 }
-nav div #search:focus {
+#search-results #search:focus {
   outline: none;
 }
 
@@ -105,28 +93,35 @@ main div {
 main div #pokemon-loading {
   grid-column: 1;
 }
-main div #pokemon-loading #loading {
+main div #pokemon-loading ul {
   list-style: none;
 }
 main div #pokemon-list {
   grid-column: 2;
-}
-main div #pokemon-list ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  justify-content: flex-start;
 }
-main div #pokemon-list ul li {
+main div #pokemon-list #list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+main div #pokemon-list #list li {
   background-color: rgba(255, 255, 255, 0.842);
   border-radius: 40px;
   display: grid;
   grid-template-rows: 30% 10% 30% 30%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 30%;
+  min-width: 288px;
   gap: 10px;
   height: 200px;
   margin: 40px 0 0 20px;
 }
-main div #pokemon-list ul li img {
+main div #pokemon-list #list li img {
   grid-row: 1;
   border-radius: 20px;
   position: relative;
@@ -135,14 +130,14 @@ main div #pokemon-list ul li img {
   transform: translateX(-50%);
   top: -110%;
 }
-main div #pokemon-list ul li p:nth-of-type(1) {
+main div #pokemon-list #list li p:nth-of-type(1) {
   grid-row: 2;
   color: rgb(119, 119, 119);
   font-size: 1rem;
   text-align: center;
   font-weight: bold;
 }
-main div #pokemon-list ul li p:nth-of-type(2) {
+main div #pokemon-list #list li p:nth-of-type(2) {
   grid-row: 3;
   color: rgb(0, 0, 0);
   font-size: 1.2rem;
@@ -153,6 +148,10 @@ main div #pokemon-list ul li p:nth-of-type(2) {
 
 #pokemon-details {
   grid-column: 3;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+#pokemon-details #pokemon-detail {
   background-color: rgba(255, 255, 255, 0.548);
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -162,59 +161,70 @@ main div #pokemon-list ul li p:nth-of-type(2) {
   height: -moz-fit-content;
   height: fit-content;
   padding-bottom: 20px;
+  width: 500px;
 }
-#pokemon-details img {
+#pokemon-details #pokemon-detail img {
   height: 200px;
   position: relative;
-  top: -70px;
+  top: -50px;
 }
-#pokemon-details .id {
+#pokemon-details #pokemon-detail .id {
   color: rgb(105, 105, 105);
 }
-#pokemon-details h2 {
+#pokemon-details #pokemon-detail h2 {
   color: rgb(0, 0, 0);
   font-size: 2rem;
   text-transform: capitalize;
 }
-#pokemon-details .types {
+#pokemon-details #pokemon-detail .types {
   list-style: none;
   display: flex;
   gap: 10px;
   padding: 20px 0;
 }
-#pokemon-details .types li {
-  border-radius: 20px;
-  padding: 10px;
-  background-color: pink;
-  color: green;
-}
-#pokemon-details h3 {
+#pokemon-details #pokemon-detail h3 {
   padding: 10px 0;
   text-transform: uppercase;
 }
-#pokemon-details .abilities {
+#pokemon-details #pokemon-detail .abilities {
   display: flex;
   gap: 10px;
   list-style: none;
   padding-bottom: 20px;
 }
-#pokemon-details .abilities li {
+#pokemon-details #pokemon-detail .abilities li {
   color: rgb(0, 0, 0);
   background-color: royalblue;
   padding: 7px;
   border-radius: 20px;
 }
-#pokemon-details p {
+#pokemon-details #pokemon-detail p {
   padding: 10px 0;
   color: rgb(0, 0, 0);
 }
-#pokemon-details .stats {
+#pokemon-details #pokemon-detail .stats {
   padding: 10px 0;
   color: rgb(0, 0, 0);
 }
-#pokemon-details .stats li {
+#pokemon-details #pokemon-detail .stats li {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #000;
+  z-index: 999;
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */

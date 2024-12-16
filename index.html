@@ -3,39 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
     <link rel="stylesheet" href="css/styles.css">
+    <title>Pokemon App</title>
+
+	<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a class="coming-soon" href="#">Home</a></li>
-            <li><a href="#">Pokedex</a></li>
-            <li><a class="coming-soon" href="#">Videogames</a></li>
-            <li><a class="coming-soon" href="#">GCC Pokemon</a></li>
-            <li><a class="coming-soon" href="#">TV Pokemon</a></li>
-            <li><a class="coming-soon" href="#">Play! Pokemon</a></li>
-            <li><a class="coming-soon" href="#">News</a></li>
-        </ul>
-        <div id="search-results">
-            <input type="text" id="search" placeholder="Szukaj Pokemona..."></input>
-            <!--<button id="search-button"></button>-->
-        </div>
-    </nav>
-    <main>
-        <div>
-            <div id="pokemon-loading">
-                <ul id="loading">
+    <div id="root"></div>
 
-                </ul>
-            </div>
-            <section id="pokemon-list">
-                <ul id="list"></ul>
-            </section>
-            <section id="pokemon-details">
-            </section>
-        </div>
-        <script src="index.js"></script>
-    </main>
+    <script type="text/babel"  src="App.js"></script>
+    <script type="text/babel"  src="components/LoadingList.jsx"></script>
+    <script type="text/babel"  src="components/NavBar.jsx"></script>
+    <script type="text/babel"  src="components/PokemonDetails.jsx"></script>
+    <script type="text/babel"  src="components/PokemonList.jsx"></script>
+    <script type="text/babel"  src="components/SearchBar.jsx"></script>
+
 </body>
 </html>
