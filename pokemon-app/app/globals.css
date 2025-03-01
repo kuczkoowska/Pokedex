@@ -101,13 +101,15 @@ main div #pokemon-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 100px;
   justify-content: flex-start;
 }
 main div #pokemon-list #list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
 }
 main div #pokemon-list #list li {
   background-color: rgba(255, 255, 255, 0.842);
@@ -151,7 +153,7 @@ main div #pokemon-list #list li p:nth-of-type(2) {
   margin-left: 20px;
   margin-top: 40px;
 }
-#pokemon-details #pokemon-detail {
+#pokemon-details {
   background-color: rgba(255, 255, 255, 0.548);
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -163,50 +165,50 @@ main div #pokemon-list #list li p:nth-of-type(2) {
   padding-bottom: 20px;
   width: 500px;
 }
-#pokemon-details #pokemon-detail img {
+#pokemon-details img {
   height: 200px;
   position: relative;
   top: -50px;
 }
-#pokemon-details #pokemon-detail .id {
+#pokemon-details .id {
   color: rgb(105, 105, 105);
 }
-#pokemon-details #pokemon-detail h2 {
+#pokemon-details h2 {
   color: rgb(0, 0, 0);
   font-size: 2rem;
   text-transform: capitalize;
 }
-#pokemon-details #pokemon-detail .types {
+#pokemon-details .types {
   list-style: none;
   display: flex;
   gap: 10px;
   padding: 20px 0;
 }
-#pokemon-details #pokemon-detail h3 {
+#pokemon-details h3 {
   padding: 10px 0;
   text-transform: uppercase;
 }
-#pokemon-details #pokemon-detail .abilities {
+#pokemon-details .abilities {
   display: flex;
   gap: 10px;
   list-style: none;
   padding-bottom: 20px;
 }
-#pokemon-details #pokemon-detail .abilities li {
+#pokemon-details .abilities li {
   color: rgb(0, 0, 0);
   background-color: royalblue;
   padding: 7px;
   border-radius: 20px;
 }
-#pokemon-details #pokemon-detail p {
+#pokemon-details p {
   padding: 10px 0;
   color: rgb(0, 0, 0);
 }
-#pokemon-details #pokemon-detail .stats {
+#pokemon-details .stats {
   padding: 10px 0;
   color: rgb(0, 0, 0);
 }
-#pokemon-details #pokemon-detail .stats li {
+#pokemon-details .stats li {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -227,4 +229,22 @@ main div #pokemon-list #list li p:nth-of-type(2) {
   color: #000;
   z-index: 999;
   font-weight: bold;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+#search-bar {
+  margin: 20px auto 300px 200px;
+  width: 50vw;
+}
+
+#search-bar input[type="search"] {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+#search-bar input[type="search"]:focus {
+  outline: none;
+  border-color: #888;
+}

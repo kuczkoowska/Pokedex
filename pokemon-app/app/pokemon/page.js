@@ -74,7 +74,8 @@ export default function Main() {
             <PokemonList pokemons={displayedPokemon} onSelect={handleSelect} />
             {selectedPokemon && <PokemonDetails pokemon={selectedPokemon} />}
           </>
-        )}
+        )
+        }
       </div>
     </main>
   );
